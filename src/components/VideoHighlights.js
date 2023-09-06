@@ -6,8 +6,6 @@ import "videojs-contrib-ads";
 import "videojs-ima";
 import "video.js/dist/video-js.css";
 import "videojs-ima/src/css/videojs.ima.css";
-import VRButton from './VRButton.jsx'
-import Video from './video.jsx';
 
 export const VideoHighlights = (props) => {
   const videoRef = useRef(null);
@@ -65,22 +63,15 @@ export const VideoHighlights = (props) => {
           {props.date}
         </Typography>
       </div>
-      <div>
+      {/* <div>
         <VRButton />
-      </div>
+      </div> */}
       <div data-vjs-player>
         <video
           ref={videoRef}
           className="video-js vjs-big-play-centered"
           crossOrigin="anonymous"
-          keys={keys}
         />
-
-        <Video ref="video"
-          keys={keys} >
-        </Video>
-
-
 
 
       </div>
