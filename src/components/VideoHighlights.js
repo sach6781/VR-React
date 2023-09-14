@@ -7,6 +7,7 @@ import "videojs-ima";
 import "video.js/dist/video-js.css";
 import "videojs-ima/src/css/videojs.ima.css";
 
+
 export const VideoHighlights = (props) => {
   const videoRef = useRef(null);
   const playerRef = useRef(null);
@@ -19,6 +20,32 @@ export const VideoHighlights = (props) => {
       const player = (playerRef.current = videojs(videoElement, options, () => {
         onReady && onReady(player);
       }));
+
+
+      function handleOrientation(event) {
+        const alpha = event.alpha;
+        const beta = event.beta;
+        const gamma = event.gamma;
+
+        console.log('Alpha - ', alpha)
+        console.log('beta - ', beta)
+        console.log('gamma - ', gamma)
+
+        videoElement.style.transform = `rotateX(${beta}deg) rotateY(${alpha}deg) rotateZ(${gamma}deg)`;
+      
+  
+        // Map and adjust these values as needed for your specific video and VR player
+        // Example: player.vr.setOrientation({ yaw: alpha, pitch: beta, roll: gamma });
+      }
+  
+      // Attach device orientation event listener
+      if (window.DeviceOrientationEvent) {
+        console.log('Device orientation is supported!')
+        window.addEventListener('deviceorientation', handleOrientation);
+      } else {
+        console.error('Device orientation not supported.');
+      }
+
       player.poster(props.poster);
       player.src(props.src);
       player.vr({ projection: "360" });
@@ -38,6 +65,7 @@ export const VideoHighlights = (props) => {
         player.dispose();
         playerRef.current = null;
       }
+     window.removeEventListener('deviceorientation', handleOrientation);
     };
   }, [playerRef]);
 
@@ -63,9 +91,6 @@ export const VideoHighlights = (props) => {
           {props.date}
         </Typography>
       </div>
-      {/* <div>
-        <VRButton />
-      </div> */}
       <div data-vjs-player>
         <video
           ref={videoRef}

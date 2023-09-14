@@ -15,7 +15,7 @@ import CarouselScroll from "./CarouselScroll.js";
 import Divider from "./Divider.js";
 
 const ChosenHighlight = (props) => {
-  const videoURL = process.env.PUBLIC_URL + 'eagle-360.mp4';
+  const videoURL = process.env.PUBLIC_URL + '/' +'360-sea-mountain.mp4';
   const [chosen, setChosen] = useState({
     id: "1",
     description: "All the action from this nailbiter!",
