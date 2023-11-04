@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/VR-React/static/css/main.c42d559d.chunk.css",
-    "main.js": "/VR-React/static/js/main.1bd66d7d.chunk.js",
-    "main.js.map": "/VR-React/static/js/main.1bd66d7d.chunk.js.map",
+    "main.js": "/VR-React/static/js/main.e39430df.chunk.js",
+    "main.js.map": "/VR-React/static/js/main.e39430df.chunk.js.map",
     "runtime-main.js": "/VR-React/static/js/runtime-main.61f680ee.js",
     "runtime-main.js.map": "/VR-React/static/js/runtime-main.61f680ee.js.map",
     "static/css/2.9c917eb4.chunk.css": "/VR-React/static/css/2.9c917eb4.chunk.css",
-    "static/js/2.bab71c16.chunk.js": "/VR-React/static/js/2.bab71c16.chunk.js",
-    "static/js/2.bab71c16.chunk.js.map": "/VR-React/static/js/2.bab71c16.chunk.js.map",
+    "static/js/2.413dc716.chunk.js": "/VR-React/static/js/2.413dc716.chunk.js",
+    "static/js/2.413dc716.chunk.js.map": "/VR-React/static/js/2.413dc716.chunk.js.map",
     "index.html": "/VR-React/index.html",
     "static/css/2.9c917eb4.chunk.css.map": "/VR-React/static/css/2.9c917eb4.chunk.css.map",
     "static/css/main.c42d559d.chunk.css.map": "/VR-React/static/css/main.c42d559d.chunk.css.map",
-    "static/js/2.bab71c16.chunk.js.LICENSE.txt": "/VR-React/static/js/2.bab71c16.chunk.js.LICENSE.txt"
+    "static/js/2.413dc716.chunk.js.LICENSE.txt": "/VR-React/static/js/2.413dc716.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.61f680ee.js",
     "static/css/2.9c917eb4.chunk.css",
-    "static/js/2.bab71c16.chunk.js",
+    "static/js/2.413dc716.chunk.js",
     "static/css/main.c42d559d.chunk.css",
-    "static/js/main.1bd66d7d.chunk.js"
+    "static/js/main.e39430df.chunk.js"
   ]
 }
