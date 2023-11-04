@@ -48,7 +48,7 @@ const ChosenHighlight = (props) => {
     forceNonLinearFullSlot: false};
 
   return (
-    <>
+    <div>
       <div>
         <VideoHighlights
           options={options}
@@ -65,10 +65,7 @@ const ChosenHighlight = (props) => {
           ))}
         </ImageList>
       </div>
-      {/* <Divider>
-        <CarouselScroll />
-      </Divider> */}
-    </>
+    </div>
   );
 };
 export default ChosenHighlight;

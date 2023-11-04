@@ -16,6 +16,9 @@ import { Container, InputGroup, Table } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 
 import "./styles.css";
+import VRThreeJS from "./components/VRThreeJS";
+import MyVRScene from "./components/MyVRScene";
+import VRPlayer from "./components/VRPlayer.jsx";
 
 export default function App() {
   const [team, setTeam] = useState();
@@ -23,17 +26,19 @@ export default function App() {
 
   const [vidtype, setVidtype] = useState("");
 
+  const videoURL = process.env.PUBLIC_URL + '/' + '360-sea-mountain.mp4';
+  console.log('Printing video URL - ', videoURL)
 
 
   useEffect(() => {
-    
+
     console.log(team);
   }, [team]);
 
 
   return (
-    <>
-      <Typography gutterBottom variant="h4" component="div">
+    <div>
+      {/* <Typography gutterBottom variant="h4" component="div">
         360<span>&#176;</span> View
       </Typography>
           <Box
@@ -44,11 +49,17 @@ export default function App() {
             }}
           >
             <ChosenHighlight team={team} />
-          </Box>
 
+          
 
+          </Box> */}
 
+      {/* <VRThreeJS /> */}
+      <div style={{ display: 'flex' }}>
+        {/* <MyVRScene width="50%" height="50%" /> */}
+        <VRPlayer width="50%" height="50%" />
+      </div>
 
-    </>
+    </div>
   );
 }

@@ -92,12 +92,26 @@ export const VideoHighlights = (props) => {
         </Typography>
       </div>
       <div data-vjs-player>
+        {/* <video
+          ref={videoRef}
+          className="video-js vjs-big-play-centered"
+          crossOrigin="anonymous"
+        /> */}
+
+
+<a-scene>
+      <a-assets>
+        {/* <video id="video_1" src={videoURL} autoPlay controls></video> */}
         <video
+          id="video_1"
           ref={videoRef}
           className="video-js vjs-big-play-centered"
           crossOrigin="anonymous"
         />
-
+        
+      </a-assets>
+      <a-videosphere src="#video_1" rotation="0 180 0"></a-videosphere>
+    </a-scene>
 
       </div>
     </>
