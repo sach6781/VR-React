@@ -207,7 +207,7 @@ const VRPlayer = () => {
   };
 
   return (
-    <div>
+    <div style={{width: '80%', height: '60vh'}}>
       <a-scene cursor="rayOrigin: mouse">
         <a-entity camera look-controls></a-entity>
       </a-scene>
