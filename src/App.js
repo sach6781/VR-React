@@ -73,7 +73,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/VR-React" element={<HomePage />} />
         <Route path="/video/:id" element={<VRPlayer />} />
       </Routes>
     </Router>
