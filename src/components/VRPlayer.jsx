@@ -58,7 +58,7 @@ const VRPlayer = () => {
       scene.appendChild(videosphere);
 
       // Start playing the video after it's loaded
-      // video.play();
+      video.play();
     };
 
     scene.appendChild(video);
@@ -71,7 +71,7 @@ const VRPlayer = () => {
           const session = await navigator.xr.requestSession('immersive-vr', {
             requiredFeatures: ['viewer', 'local-floor'],
           });
-
+    
           const baseLayer = new XRWebGLLayer(session, scene.renderer);
           session.updateRenderState({ baseLayer });
           session.requestReferenceSpace('local-floor').then((referenceSpace) => {
@@ -82,15 +82,14 @@ const VRPlayer = () => {
         } catch (e) {
           console.error('Error entering VR mode:', e);
         }
+      } else {
+        console.warn('Immersive VR not supported.');
       }
     };
-
+    
     const vrButton = document.createElement('button');
     vrButton.innerText = 'Click to Enter VR Mode';
-    vrButton.onclick = () => {
-      enterFullscreen();
-      enterVR();
-    };
+    vrButton.onclick = enterVR;
     scene.appendChild(vrButton);
 
     return () => {
@@ -98,11 +97,25 @@ const VRPlayer = () => {
     };
   }, [id, videoInfo]);
 
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
+  const handlePause = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+  };
+
   return (
     <div style={{ width: '100%', height: '100vh' }}>
       <a-scene cursor="rayOrigin: mouse">
         <a-entity camera look-controls></a-entity>
       </a-scene>
+      <button onClick={handlePlay}>Start Video</button>
+      <button onClick={handlePause}>Stop Video</button>
     </div>
   );
 };
