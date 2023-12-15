@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/VR-React/static/js/main.6345fd5d.chunk.js",
-    "main.js.map": "/VR-React/static/js/main.6345fd5d.chunk.js.map",
+    "main.js": "/VR-React/static/js/main.d6907357.chunk.js",
+    "main.js.map": "/VR-React/static/js/main.d6907357.chunk.js.map",
     "runtime-main.js": "/VR-React/static/js/runtime-main.61f680ee.js",
     "runtime-main.js.map": "/VR-React/static/js/runtime-main.61f680ee.js.map",
     "static/js/2.88d3acde.chunk.js": "/VR-React/static/js/2.88d3acde.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.61f680ee.js",
     "static/js/2.88d3acde.chunk.js",
-    "static/js/main.6345fd5d.chunk.js"
+    "static/js/main.d6907357.chunk.js"
   ]
 }
