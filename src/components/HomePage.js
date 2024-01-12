@@ -10,17 +10,17 @@ const HomePage = () => {
 
   const videoData = [
     {
-      id: 1,
+      id: 'london_bridge_360',
       title: 'London Bridge',
       thumbnailUrl: london_bridge,
     },
     {
-      id: 2,
+      id: 'sea_360',
       title: 'Dubai in 360',
       thumbnailUrl: sea,
     },
     {
-      id: 3,
+      id: 'eagle_360',
       title: 'Eagle Soaring in Skies.',
       thumbnailUrl: eagle,
     }
