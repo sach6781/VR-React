@@ -78,7 +78,7 @@ const VRPlayer = () => {
       {/* <button onClick={handlePlay}>Start Video</button>
       <button onClick={handlePause}>Stop Video</button> */}
 
-      <a-scene cursor="rayOrigin: mouse" style={{width: '10%', height: '10%', position: 'absolute', top: '0px', left: '0px'}}>
+      <a-scene cursor="rayOrigin: mouse" style={{width: '10%', height: '10%', position: 'absolute', top: '10px', left: '100px'}}>
       <a-vr-mode-ui style={{ position: 'absolute', top: '100px', left: '100px' }}></a-vr-mode-ui>
 
         <a-entity camera look-controls></a-entity>
